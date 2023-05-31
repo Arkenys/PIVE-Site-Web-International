@@ -35,7 +35,9 @@ $destinations = Destination::all();
                     <p>
                     @endif
                         <div class="bg-gray-100 p-6 rounded-lg">
+                            @if($photos[$destination->nom]!=null)
                             <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{$photos[$destination->nom]->url}}" alt="content">
+                            @endif
                             <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">{{$destination->pays}}, {{$destination->continent}}</h3>
                             <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{$destination->nom}}</h2>
                             <p class="leading-relaxed text-base truncate">{{$destination->intro}}</p>

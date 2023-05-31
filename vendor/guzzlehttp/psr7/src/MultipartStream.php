@@ -68,9 +68,6 @@ final class MultipartStream implements StreamInterface
         $stream = new AppendStream();
 
         foreach ($elements as $element) {
-            if (!is_array($element)) {
-                throw new \UnexpectedValueException("An array is expected");
-            }
             $this->addElement($stream, $element);
         }
 

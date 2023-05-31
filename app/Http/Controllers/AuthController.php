@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Admin;
 use App\Editeur;
 use phpCAS;
+use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
 {
@@ -17,12 +18,11 @@ class AuthController extends Controller
             phpCAS::forceAuthentication();
         }
         $isPolytech=false;
-        $myfile = fopen("userlist.txt", "r") or die("Unable to open file!");
-        while(!feof($myfile)) {
-            $currentUser=trim(fgets($myfile));
-            if($currentUser==phpCAS::getAttribute("uid")) $isPolytech=true;
+        $file = Storage::disk('local')->get('authorizated-uid-list');
+        $uids=explode("\n",$file);
+        foreach($uids as $uid){
+            if($uid==phpCAS::getAttribute("uid")) $isPolytech=true;
         }
-        fclose($myfile);
         session()->put('isPolytech',$isPolytech);
         session()->put('uid',phpCAS::getAttribute("uid"));
         session()->put('prenom',phpCAS::getAttribute("givenname"));
@@ -47,6 +47,6 @@ class AuthController extends Controller
         session()->forget(['uid','nom','prenom','mail','isPolytech','isAdmin','isEditeur']);
         session()->save();
         phpCAS::client(CAS_VERSION_2_0,'auth.univ-lorraine.fr',443,'');
-        phpCAS::logoutWithRedirectService("http://polytech-international.univ-lorraine.fr:8000");
+        phpCAS::logoutWithRedirectService("https://international.polytech-nancy.univ-lorraine.fr");
     }
 }

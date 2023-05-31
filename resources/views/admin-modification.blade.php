@@ -132,12 +132,12 @@
                     @foreach($photos->where("categorie","intro") as $photo)
                     <?php 
                     $url=$photo->url;
-                    $photo=explode("/",$photo->url)[3];
+                    $photo=explode("/",$photo->url)[2];
                     ?>
                     <div class="flex space-x-4"><span class="px-3 py-2 text-sm font-medium">{{$photo}}</span>
                     <button onclick="afficherMasquer('{{$url}}')" type="button" class="hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Afficher/Masquer</button>
                     <button onclick="supprimage('{{$url}}')" type="button" class="items-center hover:bg-red-700 hover:text-white bg-white text-red-700 px-3 py-2 rounded-md text-sm font-medium">Supprimer</button>
-                    <img id='{{$url}}' style="display: none" class="object-contain w-full h-96" src="{{$url}}"/></div>
+                    <img id='{{$url}}' style="display: none" class="object-contain w-full h-96" src="../../{{$url}}"/></div>
                     @endforeach
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Ajouter de nouvelles images</label>
                     <input name="introphotos[]" accept="image/*" class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="file" multiple>
@@ -152,12 +152,12 @@
                     @foreach($photos->where("categorie","temoignages") as $photo)
                     <?php 
                         $url=$photo->url;
-                        $photo=explode("/",$photo->url)[3];
+                        $photo=explode("/",$photo->url)[2];
                     ?>
                     <div class="flex space-x-4"><span class="px-3 py-2 text-sm font-medium">{{$photo}}</span>
                     <button onclick="afficherMasquer('{{$url}}')" type="button" class="hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Afficher/Masquer</button>
                     <button onclick="supprimage('{{$url}}')" type="button" class="items-center hover:bg-red-700 hover:text-white bg-white text-red-700 px-3 py-2 rounded-md text-sm font-medium">Supprimer</button>
-                    <img id='{{$url}}' style="display: none" class="object-contain w-full h-96" src="{{$url}}"/></div>
+                    <img id='{{$url}}' style="display: none" class="object-contain w-full h-96" src="../../{{$url}}"/></div>
                     @endforeach
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Ajouter de nouvelles images</label>
                     <input name="temoignagesphotos[]" accept="image/*" class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="file" multiple>

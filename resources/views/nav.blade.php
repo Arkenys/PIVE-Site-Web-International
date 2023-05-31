@@ -7,7 +7,7 @@
     <div class="hidden w-full lg:block lg:w-auto ml-4 lg:py-1 lg:pl-4 lg:border-l lg:border-gray-400" id="mobile-menu">
       <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
         <li>
-          <a href="/" class="block py-2 pr-4 pl-3 hover:bg-blue-500 hover:text-white px-3 rounded-md text-sm font-medium">Acceuil</a>
+          <a href="/" class="block py-2 pr-4 pl-3 hover:bg-blue-500 hover:text-white px-3 rounded-md text-sm font-medium">Accueil</a>
         </li>
         <li>
           <a href="/destinations" class="block py-2 pr-4 pl-3 hover:bg-blue-500 hover:text-white px-3 rounded-md text-sm font-medium">Destinations</a>

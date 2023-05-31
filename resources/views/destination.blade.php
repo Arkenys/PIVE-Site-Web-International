@@ -28,8 +28,8 @@
                   <div class="swiper-slide">
                     <img
                       class="object-contain w-full h-72"
-                      src="{{$photo->url}}"
-                      alt="image"
+                      src="../{{$photo->url}}"
+                      alt="L'image n'as pas pu charger"
                     />
                   </div>
                   @endforeach
@@ -45,7 +45,7 @@
                   <div class="swiper-slide">
                     <img
                       class="object-contain w-full h-96"
-                      src="{{$photo->url}}"
+                      src="../{{$photo->url}}"
                       alt="image"
                     />
                   </div>
