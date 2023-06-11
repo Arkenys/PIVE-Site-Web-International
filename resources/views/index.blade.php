@@ -42,7 +42,7 @@
             display    : none;">
     <div class="text-center mb-20">
       <h1 class="sm:text-3xl mt-4 text-2xl font-medium title-font text-blue-900 mb-4">{{$msgaccueil->titre}}</h1>
-      <p class="text-base w-auto h-auto leading-relaxed mx-auto text-gray-500">{{$msgaccueil->contenu}}</p>
+      <p class="text-base w-auto h-auto leading-relaxed mx-auto text-gray-500">{{$msgaccueil->contenu.str_replace("\n","<br>",$article->contenu)}}</p>
     </div>
     <button id="msgbtn" onclick="cacher_msg()" class="flex items-center justify-center ml-5 mb-5 bg-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full my-2">
       <span class="text-white">OK</span>
