@@ -73,7 +73,7 @@
                         </div>
                         <div class="w-full grid grid-cols-1 mt-5 mx-7">
                             <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-bold">Contenu</label>
-                            <textarea name="contenu" style="white-space: pre-wrap" class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" required>{{$msgaccueil->contenu}}</textarea>
+                            <textarea name="contenu" style="white-space: pre-wrap" class="py-2 px-3 rounded-lg border-2 border-blue-300 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" type="text" required>{!! nl2br(e($msgaccueil->contenu)) !!}</textarea>
                         </div>
                         <button type="submit" class='w-auto bg-blue-500 hover:bg-blue-700 rounded-lg shadow-xl font-medium text-white px-4 py-2 mt-5 mx-7'>Enregistrer</button>
                     </div>
