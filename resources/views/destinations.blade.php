@@ -24,7 +24,7 @@ $destinations = Destination::all();
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Découvrez où nos étudiants ont choisi de partir pour leur mobilité internationale!</h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Find out where our students have chosen to go for their international mobility!</p>
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Discover where our students have chosen to go for their international mobility and gain valuable insights into their enriching experiences. Explore the various destinations they have chosen and start planning your own study abroad journey.</p>
             </div>
             <div class="flex flex-wrap ">
                 @foreach($destinations as $destination)
